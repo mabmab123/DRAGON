@@ -2774,13 +2774,13 @@ end
 if text == 'اروو' or text == 'سورس' or text == 'السورس' or text == 'source' or text == 'يا سورس' or text == 'OLIANO' then 
 local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
-╭──── ● ☆ ● ────╮
-☆
-☾︎⁂𝘄𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝘀𝗼𝘂𝗿𝗰𝗲 𝗮𝗿𝗿𝗼𝘄⁂☽︎   
+    ╭──── ● ☆ ● ────╮
+    ☆                                  ☆
+  ☾︎⁂𝘄𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝘀𝗼𝘂𝗿𝗰𝗲 ⁂☽︎   
 ☾︎⁂𝗮𝗿𝗿𝗼𝘄 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𝘀𝗼𝘂𝗿𝗰𝗲⁂☽︎    
-☾︎⁂𝗼𝗻 𝘁𝗲𝗹𝗲𝗲𝗴𝗿𝗮𝗺⁂☽︎ 
-☆
-╰──── ● ☆ ● ────╯
+      ☾︎⁂𝗼𝗻 𝘁𝗲𝗹𝗲𝗲𝗴𝗿𝗮𝗺⁂☽︎ 
+    ☆                                  ☆
+    ╰──── ● ☆ ● ────╯
 ⍟  𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 
 ]] 
 keyboard = {}  
@@ -2788,7 +2788,7 @@ keyboard.inline_keyboard = {
 {{text = '☼︎☾︎⁂ 𝗗𝗘𝗩 𝗠𝗔𝗕 ⁂☽︎☼︎',url="t.me/xO_mab_Ox"},{text = '☼︎☾︎⁂ 𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔 ⁂☽︎☼︎',url="t.me/B_o_y_k_a_2"}},
 {{text = '  ❨ ☾︎♫︎ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗥𝗥𝗢𝗪 ♫︎☽︎ ❩ ',url="https://t.me/SouRce_Mab"}}, 
 }
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_Mab/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_Mab/4/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then 
@@ -5766,7 +5766,7 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------ adddev2 sudog
-if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
+if text == ("رفع ماب") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:sadd(bot_id.."Dev:SoFi:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","✩ تم ترقيته مطور في البوت")  
@@ -5774,8 +5774,8 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع مطور ثانوي @(.*)$") and SudoBot(msg) then
-local username = text:match("^رفع مطور ثانوي @(.*)$")
+if text and text:match("^رفع ماب @(.*)$") and SudoBot(msg) then
+local username = text:match("^رفع ماب @(.*)$")
 function Function_DRAGON(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -5791,10 +5791,10 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع مطور ثانوي (%d+)$") and SudoBot(msg) then
-local userid = text:match("^رفع مطور ثانوي (%d+)$")
+if text and text:match("^رفع ماب (%d+)$") and SudoBot(msg) then
+local userid = text:match("^رفع ماب (%d+)$")
 database:sadd(bot_id.."Dev:SoFi:2", userid)
-Reply_Status(msg,userid,"reply","✩ تم ترقيته مطور في البوت")  
+Reply_Status(msg,userid,"reply","✩تم ترقيته مطور ثانوي في البوت")  
 return false 
 end
 if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
@@ -11801,6 +11801,16 @@ end
 end
 
 if text then 
+list = {'بيكو'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[عم التليجرام يقلبي ♥(t.me/D_M_beko)') 
+return false
+end
+end
+end
+
+if text then 
 list = {'عرفني'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
@@ -12435,7 +12445,7 @@ local List = {
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
-- ?? 𝐌𝐬𝐆  : #msgs 𓂅 .
+- 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
 - 𓏬 𝗖𝗛 - @ABCDABCDL ♬.
