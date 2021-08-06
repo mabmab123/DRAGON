@@ -5769,7 +5769,7 @@ end
 if text == ("رفع ماب") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:sadd(bot_id.."Dev:SoFi:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","✩ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,result.sender_user_id_,"reply","✩ تم ترقيته مطور في البوت")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
@@ -5783,8 +5783,7 @@ send(msg.chat_id_,msg.id_,"✩ عذرا عزيزي المستخدم هاذا م�
 return false 
 end      
 database:sadd(bot_id.."Dev:SoFi:2", result.id_)
-Reply_Status(msg,result.id_,"reply","✩ تم ترقيته مطور ثانوي في البوت
-")  
+Reply_Status(msg,result.id_,"reply","✩ تم ترقيته مطور في البوت")  
 else
 send(msg.chat_id_, msg.id_,"✩ لا يوجد حساب بهاذا المعرف")
 end
@@ -5801,7 +5800,7 @@ end
 if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:srem(bot_id.."Dev:SoFi:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","✩تم تنزيله من المطور الثانوي")  
+Reply_Status(msg,result.sender_user_id_,"reply","✩ تم تنزيله من مطور")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
@@ -11811,18 +11810,6 @@ end
 end
 end
 
-
-if text then 
-list = {'بيكو'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عم التليجرام يقلبي ♥(t.me/D_M_beko)') 
-return false
-end
-end
-end
-
-
 if text then 
 list = {'عرفني'}
 for k,v in pairs(list) do
@@ -12429,7 +12416,7 @@ local List = {
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜?? #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
-► 𝗠𝗦𝗔?? #msgs 𓃚 ꙰
+► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
 ► 𝗖𝗛 - @ABCDABCDL ♬.
 ]],
 [[
