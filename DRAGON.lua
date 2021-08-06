@@ -2837,6 +2837,31 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xO_mab_Ox&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
+if text == 'بيكو' or text == 'مطور بوت موكا' or text == 'ماب مبرمج السورس' or text == 'بيكو' then
+local Text =[[
+
+
+ان اردت التوتصل مع مكور البوت بيكو
+صاحب بوت موكا افضل بوتات التليجرام 
+اتبع الازرار♥
+
+
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+
+{
+{text = '☾︎⁂ بيكو صاحب العظمه ⁂☽︎', url = "https://t.me/D_M_beko"},
+},
+{
+{text = '☾︎♫︎ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗥𝗥𝗢𝗪 ♫︎☽︎', url = "https://t.me/SouRce_Mab"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xO_mab_Ox&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
 if text == 'بويكا' or text == 'المبرمج بويكا' or text == 'بويكا مبرمج السورس' or text =='الهقر' then
 local Text =[[
 
