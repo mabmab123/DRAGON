@@ -2771,26 +2771,6 @@ end
 end,nil)   
 end
 
-if text == 'اروو' or text == 'سورس' or text == 'السورس' or text == 'source' or text == 'يا سورس' or text == 'OLIANO' then 
-local msg_id = msg.id_/2097152/0.5  
-local Text = [[ 
-╭──── ● ☆ ● ────╮
-☆                                  ☆
-☾︎⁂𝘄𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝘀𝗼𝘂𝗿𝗰𝗲 ⁂☽︎   
-☾︎⁂𝗮𝗿𝗿𝗼𝘄 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𝘀𝗼𝘂𝗿𝗰𝗲⁂☽︎    
-☾︎⁂𝗼𝗻 𝘁𝗲𝗹𝗲𝗲𝗴𝗿𝗮𝗺⁂☽︎ 
-☆                                  ☆
-╰──── ● ☆ ● ────╯
-⍟  𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = {
-{{text = '☼︎☾︎⁂ 𝗗𝗘𝗩 𝗠𝗔𝗕 ⁂☽︎☼︎',url="t.me/xO_mab_Ox"},{text = '☼︎☾︎⁂ 𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔 ⁂☽︎☼︎',url="t.me/B_o_y_k_a_2"}},
-{{text = '  ❨ ☾︎♫︎ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗥𝗥𝗢𝗪 ♫︎☽︎ ❩ ',url="https://t.me/SouRce_Mab"}}, 
-}
-https.request("https://api.telegram.org/bot"..token..'/sendvidio?chat_id=' .. msg.chat_id_ .. '&vidio=https://t.me/SouRce_Mab/4/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then 
 local Text = [[ 
 ╭──── ● ☆ ● ────╮
@@ -13649,7 +13629,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n🇧🇱- 𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱- 𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱 - 𝒔𝒕𝒂𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱 - 𝒊𝒅 '..msg.sender_user_id_..'\n🇧🇱-  𝗖𝗛  @ABCDABCDL\n')
+send(msg.chat_id_, msg.id_,'[\n??🇱- 𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱- 𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱 - 𝒔𝒕𝒂𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱 - 𝒊𝒅 '..msg.sender_user_id_..'\n🇧🇱-  𝗖𝗛  @ABCDABCDL\n')
 end
 end
 
