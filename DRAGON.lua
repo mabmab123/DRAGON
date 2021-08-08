@@ -1191,11 +1191,11 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[اضغط هنا وانضم الي قناه السورس](t.me/so_alfaa )
+[اضغط هنا وانضم الي قناه السورس](t.me/SouRce_AZAZIL )
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'قناه السورس️️', url="t.me/so_alfaa "}}, 
+{{text = 'قناه السورس️️', url="t.me/SouRce_AZAZIL "}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1973,7 +1973,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 if data.username_ ~= false then
 send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ◉ ["..DRAGON_Msg.."] \n")
 else
-send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](T.ME/so_alfaa )}\n ◉ ["..DRAGON_Msg.."] \n")
+send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](t.me/SouRce_AZAZIL )}\n ◉ ["..DRAGON_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -2429,7 +2429,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0, " ◉ عذرا ← {[@"..data.username_.."]}\n ◉ عذرا تم منع الملصق \n" ) 
 else
-send(msg.chat_id_,0, " ◉ عذرا ← {["..data.first_name_.."](T.ME/so_alfaa )}\n ◉ عذرا تم منع الملصق \n" ) 
+send(msg.chat_id_,0, " ◉ عذرا ← {["..data.first_name_.."](t.me/SouRce_AZAZIL )}\n ◉ عذرا تم منع الملصق \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2449,7 +2449,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0," ◉ عذرا ← {[@"..data.username_.."]}\n ◉ عذرا تم منع الصوره \n" ) 
 else
-send(msg.chat_id_,0," ◉ عذرا ← {["..data.first_name_.."](T.ME/so_alfaa )}\n ◉ عذرا تم منع الصوره \n") 
+send(msg.chat_id_,0," ◉ عذرا ← {["..data.first_name_.."](t.me/SouRce_AZAZIL )}\n ◉ عذرا تم منع الصوره \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2466,7 +2466,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0," ◉ عذرا ← {[@"..data.username_.."]}\n ◉ عذرا تم منع المتحركه \n") 
 else
-send(msg.chat_id_,0," ◉ عذرا ← {["..data.first_name_.."](T.ME/so_alfaa )}\n ◉ عذرا تم منع المتحركه \n" ) 
+send(msg.chat_id_,0," ◉ عذرا ← {["..data.first_name_.."](t.me/SouRce_AZAZIL )}\n ◉ عذرا تم منع المتحركه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2710,17 +2710,17 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس'  then
 local Text =[[
-     ✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━───━☾︎✯
+[✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
      
-[♢ | 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐀𝐥𝐟𝐚](t.me/so_alfaa)
-   
-     ✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━───━☾︎✯
+[♢ | 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗦𝗼𝘂𝗿𝗰𝗲 𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
+
      
-[♢ | 𝐀𝐋𝐟𝐚 𝐓𝐡𝐞 𝐁𝐞𝐬𝐭 𝐒𝐨𝐮𝐫𝐜𝐞 𝐎𝐧 𝐓𝐞𝐥𝐞](t.me/so_alfaa)
+[♢ | 𝗔𝗭𝗔𝗭𝗜𝗟 𝗧𝗵𝗲 𝗕𝗲𝘀𝘁 𝗦𝗼𝘂𝗿𝗰𝗲 𝗢𝗻 𝗧𝗲𝗹𝗲](t.me/SouRce_AZAZIL)
  
-     ✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━───━☾︎✯
-     
-[♢ | 𝐅𝐨𝐥𝐥𝐨𝐰 𝐓𝐡𝐞 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐁𝐞𝐥𝐨𝐰](t.me/so_alfaa)
+
+[♢ | 𝗙𝗼𝗹𝗹𝗼𝘄 𝗧𝗵𝗲 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 𝗕𝗲𝗹𝗼𝘄](t.me/SouRce_AZAZIL)
+
+[✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2729,7 +2729,7 @@ keyboard.inline_keyboard = {
 {text = 'ᴅᴇᴠ ᴍᴀᴅɪsᴏɴ', url = "https://t.me/AAHMEED11"},{text = 'ᴅᴇᴠ ᴋᴀᴍᴀʟ', url = "https://t.me/W_H_U"},
 },
 {
-{text = 'ᴄʜᴀɴɴᴇʟ ᴀʟғᴀ', url = "https://t.me/so_alfaa"},{text = 'ғᴀᴄᴛᴏʀʏ ᴀʟғᴀ', url = "https://t.me/A_L_VV_BOT"},
+{text = 'ᴄʜᴀɴɴᴇʟ ᴀʟғᴀ', url = "https://t.me/SouRce_AZAZIL"},{text = 'ғᴀᴄᴛᴏʀʏ ᴀʟғᴀ', url = "https://t.me/A_L_VV_BOT"},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -2741,7 +2741,7 @@ end
 
 if text == 'قناه السورس' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
 local Text =[[
-[𝐂𝐡](t.me/so_alfaa)
+[𝐂𝐡](t.me/SouRce_AZAZIL)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2750,11 +2750,11 @@ keyboard.inline_keyboard = {
 {text = '𝐒𝐨𝐮𝐫𝐜𝐞 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫𝐬', url = "https://t.me/USERR_ALFA"},
 },
 {
-{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"}
+{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/SouRce_AZAZIL"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_AZAZIL&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '"' then
@@ -2771,18 +2771,18 @@ keyboard.inline_keyboard = {
 {text = '𝐒𝐨𝐮𝐫𝐜𝐞 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫𝐬', url = "https://t.me/USERR_ALFA"},
 },
 {
-{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"},
+{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/SouRce_AZAZIL"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_AZAZIL&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'بوت مين' or text == '"' then
 local Text =[[
 
 
-𖤛- [اهلا بك في سورس الفا الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني ](t.me/so_alfaa) 𖤛
+𖤛- [اهلا بك في سورس الفا الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني ](t.me/SouRce_AZAZIL) 𖤛
 
 
 ]]
@@ -2793,11 +2793,11 @@ keyboard.inline_keyboard = {
 {text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧', url = "https://t.me/AAHMEED11"},
 },
 {
-{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"},
+{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/SouRce_AZAZIL"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_AZAZIL&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "توكن البوت" and SudoBot(msg) or text == "جلب التوكن" and SudoBot(msg) then 
@@ -2952,7 +2952,7 @@ keyboard.inline_keyboard = {
 {text = 'بــوت الـيـوتـيـوب', url = "https://t.me/AL_YOUT_BOT"},
 },
 {
-{text = 'قـنـاة الـتـحـديـثـآت', url = "https://t.me/so_alfaa"},
+{text = 'قـنـاة الـتـحـديـثـآت', url = "https://t.me/SouRce_AZAZIL"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3308,11 +3308,11 @@ return false
 end
 if text == 'قناة السورس' then
 local Text = [[ 
-[اضغط هنا وانضم الي قناه السورس](t.me/so_alfaa )
+[اضغط هنا وانضم الي قناه السورس](t.me/SouRce_AZAZIL )
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}}, 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/SouRce_AZAZIL "}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3356,12 +3356,12 @@ local Text = [[
 ◉ لعبة البـات ← بات
 ◉ لعبة الانجليزي ← انجليزي
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}}, 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/SouRce_AZAZIL "}}, 
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3448,12 +3448,12 @@ local Text = [[
 ◉ معني + اسمك ← لعرض الميزه
 ◉ خلفيات ← لعرض الميزه
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}}, 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/SouRce_AZAZIL "}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mmsst13/869&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3490,7 +3490,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/SouRce_AZAZIL "}},
 }  
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MADI_PICK/19?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -5012,7 +5012,7 @@ local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
 local TextS = "\n ◉ اهلا بك في متجر ملفات الفا\n ◉ ملفات السورس ↓\n≪✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯≫\n\n"
-local TextE = "\n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n ◉ علامة تعني { ✔️ } ملف مفعل\n ◉ علامة تعني { x } ملف معطل\n ◉ قناة سورس الفا ↓\n".." ◉ [اضغط هنا لدخول](t.me/so_alfaa ) \n"
+local TextE = "\n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n ◉ علامة تعني { ✔️ } ملف مفعل\n ◉ علامة تعني { x } ملف معطل\n ◉ قناة سورس الفا ↓\n".." ◉ [اضغط هنا لدخول](t.me/SouRce_AZAZIL ) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -10505,7 +10505,7 @@ local text =
 ' }\n'..' ◉  الايدي ← { '..idgp..
 ' }\n'..' ◉  الايدي بالصوره ← { '..idph..
 ' }\n'..' ◉  الرفع ← { '..setadd..
-' }\n'..' ◉  الحظر ← { '..banm..' }\n\n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n ◉ قناة سورس الفا ↓\n [ 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) \n'
+' }\n'..' ◉  الحظر ← { '..banm..' }\n\n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n ◉ قناة سورس الفا ↓\n [ 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -12214,7 +12214,7 @@ ght = math.random(3,200);
 local Text ='تم اختيار المقطع الصوتي لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url="t.me/so_alfaa "}},
+{{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url="t.me/SouRce_AZAZIL "}},
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -12227,7 +12227,7 @@ ght = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
- {{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url="t.me/so_alfaa "}},
+ {{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url="t.me/SouRce_AZAZIL "}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12238,7 +12238,7 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/SouRce_AZAZIL "}},
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -14318,7 +14318,7 @@ local Text =[[
 ◉ قم بأختيار اللغه.. ↑↓
 ◉ Choose language.. ↑↓ 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14326,7 +14326,7 @@ keyboard.inline_keyboard = {
 {text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/so_alfaa  "},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/SouRce_AZAZIL  "},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -14356,7 +14356,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•\nاضغط علي الاسم ليتم نسخه\n•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•ٴ\n ◉ ❲[『𝙰𝚕𝚏𝚊』](t.me/so_alfaa )❳ ◉ ')
+send(msg.chat_id_, msg.id_, t..'•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•\nاضغط علي الاسم ليتم نسخه\n•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•ٴ\n ◉ ❲[『𝙰𝚕𝚏𝚊』](t.me/SouRce_AZAZIL )❳ ◉ ')
 end
 
 if text == "تعطيل معاني الاسماء" and Manager(msg) then
@@ -14708,7 +14708,7 @@ end
 local Teext =[[
 ◉ اكتب الامر الذي تريد تنفيذه..↑↓
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14799,7 +14799,7 @@ end
 local Teext =[[
 ◉ اكتب الامر الذي تريد تنفيذه..↑↓
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14884,7 +14884,7 @@ local Teext =[[
 ◉ التكرار.
 ◉ السب.
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14964,7 +14964,7 @@ local Teext =[[
 ◉ الصـوره.
 ◉ الرابـط.
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15033,7 +15033,7 @@ local Teext =[[
 ◉ مسح المدراء
 ◉ الـمـدراء
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15093,7 +15093,7 @@ local Teext =[[
 ◉ المطورين 
 ◉ الغاء العام
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15215,7 +15215,7 @@ local Teext =[[
 ◉ تاك للمطلقات
 ◉ مسح المطلقات
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15235,7 +15235,7 @@ local Teext =[[
 ◉ قم بأختيار اللغه.. ↑↓
 ◉ Choose language.. ↑↓ 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15243,7 +15243,7 @@ keyboard.inline_keyboard = {
 {text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/so_alfaa  "},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/SouRce_AZAZIL  "},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -15264,7 +15264,7 @@ local Teext =[[
 ◉ اليك الاوامر الخاص بسورس الفا .
 ◉ اختر الامر الذي تريده من الازرار بلاسفل .
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/so_alfaa  )
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀 ](t.me/SouRce_AZAZIL  )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15330,7 +15330,7 @@ Mobile moving
 ◉ Bots
 ◉ Prohibited
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {} 
@@ -15379,7 +15379,7 @@ local Teext =[[
 ◉ Crown for cats
 ◉ Cats survey
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15430,7 +15430,7 @@ local Teext =[[
 ◉ Crown for Paradise
 ◉ Storage survey
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {} 
@@ -15484,7 +15484,7 @@ local Teext =[[
 ◉ Mido «← ←
 ◉ Delete link
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {} 
@@ -15544,7 +15544,7 @@ local Teext =[[
 ◉ Preventors General
 ◉ Canceling the general
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {} 
@@ -15563,7 +15563,7 @@ local Teext =[[
 ◉ You can use the buttons..↑↓
 ◉ By putting pressure on them..↑↓
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
-◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/so_alfaa ) 
+◉ 𝘾𝙃 - [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐀𝐋𝐅𝐀](t.me/SouRce_AZAZIL ) 
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ]]
 keyboard = {} 
@@ -15958,7 +15958,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if data.username_ ~= false then
 send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ◉ ["..DRAGONAbot.."] \n") 
 else
-send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](T.ME/so_alfaa  )}\n ◉ ["..DRAGONAbot.."] \n") 
+send(msg.chat_id_,0," ◉ العضو : {["..data.first_name_.."](t.me/SouRce_AZAZIL  )}\n ◉ ["..DRAGONAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
