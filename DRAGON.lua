@@ -2732,9 +2732,6 @@ keyboard.inline_keyboard = {
 {text = '⌯ 𝗗𝗘𝗩 𝗙𝗥𝗘𝗫𝗔𝗦 ⌯', url = "https://t.me/FreXaS_1"},{text = '𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔', url = "https://t.me/B_o_y_k_a_2"},
 },
 {
-{text = '⌯ ✯☽︎━────━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━────━☾︎✯ ⌯', url = "https://t.me/UU_FRExAS"},
-},
-{
 {text = '⌯ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/SouRce_AZAZIL"},{text = '⌯ 𝗙𝗔𝗖𝗧𝗢𝗥𝗬 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/user_AZAZIL"},
 },
 {
@@ -6738,7 +6735,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ◉ قائمة مميزين الجروب \n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n"
+t = "\n ◉ قائمة مميزين الجروب \n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜??❖━──━☾︎✯\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8383,7 +8380,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم تنزيل جميع الخاينين')
 end
 if text == ("تاك لخطيبتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◉ قائمة خطيبات الجروب \n•━═━═━═『𝙰𝚕??𝚊』═━═━═━•\n"
+t = "\n ◉ قائمة خطيبات الجروب \n•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10416,7 +10413,7 @@ lock_spam = 'بالكتم'
 elseif database:get(bot_id.."lock:Spam"..msg.chat_id_) == "kick" then 
 lock_spam = 'بالطرد'    
 else
-lock_spam = '🔐'    
+lock_spam = '??'    
 end        
 if not database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
 rdmder = '🔓'
@@ -15405,7 +15402,7 @@ end
 local Teext =[[
 ◉ ❬ m 3 ❭ 3 ◉ Tall orders ⇊
 ◉ Lifting «← Download + it
-✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
+✯☽︎━──━❖𝗔??𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ◉ my son
 ◉ Crown for children
 ◉ Survey sons
