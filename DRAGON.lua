@@ -2914,19 +2914,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xO_mab_Ox&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == "هيهي" then
+if text == "فريكساس" then
 local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
-tdcli_function ({ID = "GetUser",user_id_ = 1704169652,},function(arg,result) 
+tdcli_function ({ID = "GetUser",user_id_ = 1885561364,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = 'ماب  الهكر للتواصل معه اتبع الازرارا ⇧\n['..result.first_name_..'](t.me/BelalElshayal)\n'
+local Name = 'فريكساس مرات كل حيات ماب♡ ⇧\n['..result.first_name_..'](t.me/BelalElshayal)\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝐁𝐄𝐋𝐀𝐋 🇦🇮',url="t.me/BelalElshayal"},
+{text = '𝗗𝗘𝗩 𝗙𝗥𝗘𝗫𝗔𝗦',url="t.me/FreXaS_1"},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -12902,13 +12902,13 @@ send(msg.chat_id_,msg.id_, '◉ باي ياحته مني..🥺💘')
 return false
 end
 
-if text == 'طيب' or text == 'تيب' then
+if text == 'يوتيوب' or text == 'اليوتيوب' then
 local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, 'فرح خالتك قريب..😂♥️ ') 
+send(msg.chat_id_,msg.id_, 'بوت يوتيوب مميز اضغط علي الرابط (  @AZAZIL_x_bot  ) ') 
 return false
 end
 
@@ -12957,13 +12957,13 @@ send(msg.chat_id_,msg.id_, 'اكتب زخرفه + الاسم للي هتزخرف
 return false
 end
 
-if text == 'بحبك' or text == 'حبق' then
+if text == 'كينج' or text == 'حبق' then
 local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '◉ بعشء امك..🥺💘') 
+send(msg.chat_id_,msg.id_, '◉ مطور سورس الكينج ♥.. ') 
 return false
 end
 
