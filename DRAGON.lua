@@ -2724,9 +2724,12 @@ local Text =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-
+	
 {
-{text = 'ᴅᴇᴠ ᴍᴀᴅɪsᴏɴ', url = "https://t.me/AAHMEED11"},{text = 'ᴅᴇᴠ ᴋᴀᴍᴀʟ', url = "https://t.me/W_H_U"},
+{text = '⌯ 𝗗𝗘𝗩 𝗠𝗔𝗕 ⌯', url = "https://t.me/xO_mab_Ox"},
+},
+{
+{text = '⌯ 𝗗𝗘𝗩 𝗙𝗥𝗘𝗫𝗔𝗦 ⌯', url = "https://t.me/FreXaS_1"},{text = '𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔', url = "https://t.me/B_o_y_k_a_2"},
 },
 {
 {text = 'ᴄʜᴀɴɴᴇʟ ᴀʟғᴀ', url = "https://t.me/SouRce_AZAZIL"},{text = 'ғᴀᴄᴛᴏʀʏ ᴀʟғᴀ', url = "https://t.me/A_L_VV_BOT"},
@@ -2790,7 +2793,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧', url = "https://t.me/AAHMEED11"},
+{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧', url = "https://t.me/xO_mab_Ox"},
 },
 {
 {text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/SouRce_AZAZIL"},
@@ -2905,7 +2908,7 @@ keyboard.inline_keyboard = {
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AAHMEED11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xO_mab_Ox&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "هيهي" then
