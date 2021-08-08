@@ -2732,7 +2732,13 @@ keyboard.inline_keyboard = {
 {text = '⌯ 𝗗𝗘𝗩 𝗙𝗥𝗘𝗫𝗔𝗦 ⌯', url = "https://t.me/FreXaS_1"},{text = '𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔', url = "https://t.me/B_o_y_k_a_2"},
 },
 {
-{text = 'ᴄʜᴀɴɴᴇʟ ᴀʟғᴀ', url = "https://t.me/SouRce_AZAZIL"},{text = 'ғᴀᴄᴛᴏʀʏ ᴀʟғᴀ', url = "https://t.me/A_L_VV_BOT"},
+{text = '⌯ ✯☽︎━────━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━────━☾︎✯ ⌯', url = "https://t.me/UU_FRExAS"},
+},
+{
+{text = '⌯ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/SouRce_AZAZIL"},{text = '⌯ 𝗙𝗔𝗖𝗧𝗢𝗥𝗬 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/user_AZAZIL"},
+},
+{
+{text = '⌯ 𝗕𝗢𝗧 𝗧𝗪𝗔𝗦𝗘𝗟 ⌯', url = "https://t.me/ARROW55_bot"},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -8377,7 +8383,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم تنزيل جميع الخاينين')
 end
 if text == ("تاك لخطيبتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◉ قائمة خطيبات الجروب \n•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•\n"
+t = "\n ◉ قائمة خطيبات الجروب \n•━═━═━═『𝙰𝚕??𝚊』═━═━═━•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
