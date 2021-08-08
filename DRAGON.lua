@@ -2732,7 +2732,7 @@ keyboard.inline_keyboard = {
 {text = '⌯ 𝗗𝗘𝗩 𝗙𝗥𝗘𝗫𝗔𝗦 ⌯', url = "https://t.me/FreXaS_1"},{text = '𝗗𝗘𝗩 𝗕𝗢𝗬𝗞𝗔', url = "https://t.me/B_o_y_k_a_2"},
 },
 {
-{text = '⌯ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/SouRce_AZAZIL"},{text = '⌯ 𝗙𝗔𝗖𝗧𝗢𝗥𝗬 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/user_AZAZIL"},
+{text = '⌯ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗭𝗔𝗭𝗜𝗟 ⌯', url = "https://t.me/SouRce_AZAZIL"},
 },
 {
 {text = '⌯ 𝗕𝗢𝗧 𝗧𝗪𝗔𝗦𝗘𝗟 ⌯', url = "https://t.me/ARROW55_bot"},
@@ -6735,7 +6735,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ◉ قائمة مميزين الجروب \n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜??❖━──━☾︎✯\n"
+t = "\n ◉ قائمة مميزين الجروب \n✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10413,7 +10413,7 @@ lock_spam = 'بالكتم'
 elseif database:get(bot_id.."lock:Spam"..msg.chat_id_) == "kick" then 
 lock_spam = 'بالطرد'    
 else
-lock_spam = '??'    
+lock_spam = '🔐'    
 end        
 if not database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
 rdmder = '🔓'
@@ -15402,11 +15402,11 @@ end
 local Teext =[[
 ◉ ❬ m 3 ❭ 3 ◉ Tall orders ⇊
 ◉ Lifting «← Download + it
-✯☽︎━──━❖𝗔??𝗔𝗭𝗜𝗟❖━──━☾︎✯
+✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
 ◉ my son
 ◉ Crown for children
 ◉ Survey sons
-✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
+✯☽︎━──━❖𝗔𝗭𝗔??𝗜𝗟❖━──━☾︎✯
 ◉ Crown for girls
 ◉ Clear the girls
 ✯☽︎━──━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━──━☾︎✯
