@@ -2710,7 +2710,7 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس'  then
 local Text =[[
-[✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
+[✯☽︎━────━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━────━☾︎✯](t.me/SouRce_AZAZIL)
      
 [♢ | 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗦𝗼𝘂𝗿𝗰𝗲 𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
 
@@ -2720,7 +2720,7 @@ local Text =[[
 
 [♢ | 𝗙𝗼𝗹𝗹𝗼𝘄 𝗧𝗵𝗲 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 𝗕𝗲𝗹𝗼𝘄](t.me/SouRce_AZAZIL)
 
-[✯☽︎━───━❖𝗔𝗭𝗔𝗭𝗜𝗟](t.me/SouRce_AZAZIL)
+[✯☽︎━────━❖𝗔𝗭𝗔𝗭𝗜𝗟❖━────━☾︎✯](t.me/SouRce_AZAZIL)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2736,7 +2736,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MADI_PICK/20?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/SouRce_AZAZIL/5?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'قناه السورس' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
