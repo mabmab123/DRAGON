@@ -15891,7 +15891,7 @@ send(msg.chat_id_, msg.id_,' 🕊 لا تستطيع استخدام البوت \n
 end
 return false
 end
-local Num = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
+local Num = tonumber(database:get(bot_id..'new:members'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
 if Num == 0 then 
 Text = ' 🕊 لم تقم بأضافه احد'
 else
