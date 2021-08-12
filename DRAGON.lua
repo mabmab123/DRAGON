@@ -34,7 +34,7 @@ end
 else
 print('\27[0;35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua MODEDEV.lua')
+os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
 io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
@@ -45,7 +45,7 @@ database:set(id_server..":SUDO:ID",SUDOID)
 else
 print('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
-os.execute('lua MODEDEV.lua')
+os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:USERNAME") then
 io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -56,7 +56,7 @@ database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
-os.execute('lua MODEDEV.lua')
+os.execute('lua DRAGON.lua')
 end
 local create_config_auto = function()
 config = {
@@ -71,10 +71,10 @@ token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
-file = io.open("MODEDEV", "w")  
+file = io.open("DRAGON", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/MODEDEV
+cd $HOME/DRAGON
 token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
@@ -94,18 +94,18 @@ echo -e "\033[38;5;208m"
 echo -e "                                                  "
 echo -e "\033[0;00m"
 echo -e "\e[36m"
-./tg -s ./MODEDEV.lua -p PROFILE --bot=$token
+./tg -s ./DRAGON.lua -p PROFILE --bot=$token
 done
 ]])  
 file:close()  
 file = io.open("NG", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/MODEDEV
+cd $HOME/DRAGON
 while(true) do
 rm -fr ../.telegram-cli
-screen -S MODEDEV -X kill
-screen -S MODEDEV ./MODEDEV
+screen -S DRAGON -X kill
+screen -S DRAGON ./DRAGON
 done
 ]])  
 file:close() 
@@ -152,7 +152,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/PHFWHDHD/Files_Modedev/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/PHFWHDHD/Files_DRAGON/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -167,13 +167,13 @@ print(serpent.block(value, {comment=false}))
 end 
 sudo_users = {SUDO,1614375843,bot_id}
 function SudoBot(msg)  
-local MODEDEV = false  
+local DRAGON = false  
 for k,v in pairs(sudo_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-MODEDEV = true  
+DRAGON = true  
 end  
 end  
-return MODEDEV  
+return DRAGON  
 end 
 function Sudo(msg) 
 local hash = database:sismember(bot_id..'Sudo:User', msg.sender_user_id_) 
@@ -446,35 +446,35 @@ local function sendPhoto(chat_id, reply_to_message_id, disable_notification, fro
 tdcli_function ({ ID = "SendMessage",   chat_id_ = chat_id,   reply_to_message_id_ = reply_to_message_id,   disable_notification_ = disable_notification,   from_background_ = from_background,   reply_markup_ = reply_markup,   input_message_content_ = {   ID = "InputMessagePhoto",   photo_ = getInputFile(photo),   added_sticker_file_ids_ = {},   width_ = 0,   height_ = 0,   caption_ = caption  },   }, dl_cb, nil)  
 end
 function Total_Msg(msgs)  
-local MODEDEV_Msg = ''  
+local DRAGON_Msg = ''  
 if msgs < 100 then 
-MODEDEV_Msg = 'تفاعلك زفت' 
+DRAGON_Msg = 'تفاعلك زفت' 
 elseif msgs < 200 then 
-MODEDEV_Msg = 'شويه شدها' 
+DRAGON_Msg = 'شويه شدها' 
 elseif msgs < 300 then 
-MODEDEV_Msg = 'شبه متفاعل ' 
+DRAGON_Msg = 'شبه متفاعل ' 
 elseif msgs < 600 then 
-MODEDEV_Msg = 'متفاعل سيكا' 
+DRAGON_Msg = 'متفاعل سيكا' 
 elseif msgs < 1000 then 
-MODEDEV_Msg = ' اسد تفاعل' 
+DRAGON_Msg = ' اسد تفاعل' 
 elseif msgs < 1500 then 
-MODEDEV_Msg = 'متفاعل جدا' 
+DRAGON_Msg = 'متفاعل جدا' 
 elseif msgs < 2000 then 
-MODEDEV_Msg = 'ملك التفاعل'  
+DRAGON_Msg = 'ملك التفاعل'  
 elseif msgs < 4000 then 
-MODEDEV_Msg = 'زعيم التفاعل' 
+DRAGON_Msg = 'زعيم التفاعل' 
 elseif msgs < 4500 then 
-MODEDEV_Msg = 'مدمن تفاعل' 
+DRAGON_Msg = 'مدمن تفاعل' 
 elseif msgs < 5000 then 
-MODEDEV_Msg = 'جامد ف التفاعل' 
+DRAGON_Msg = 'جامد ف التفاعل' 
 elseif msgs < 7000 then 
-MODEDEV_Msg = 'اكبر الملوك' 
+DRAGON_Msg = 'اكبر الملوك' 
 elseif msgs < 9500 then 
-MODEDEV_Msg = 'بطللللل التفاعل' 
+DRAGON_Msg = 'بطللللل التفاعل' 
 elseif msgs < 10000000000 then 
-MODEDEV_Msg = 'انت التفاعل نفسوو'
+DRAGON_Msg = 'انت التفاعل نفسوو'
 end 
-return MODEDEV_Msg 
+return DRAGON_Msg 
 end
 function Get_Info(msg,chat,user)
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. msg.chat_id_ ..'&user_id='..user..'')
@@ -528,16 +528,16 @@ function GetFile_Bot(msg)
 local list = database:smembers(bot_id..'Chek:Groups') 
 local t = '{"BOT_ID": '..bot_id..',"GP_BOT":{'  
 for k,v in pairs(list) do   
-NAME = 'MODEDEV Chat'
+NAME = 'DRAGON Chat'
 link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_) or ''
 ASAS = database:smembers(bot_id..'Basic:Constructor'..v)
 MNSH = database:smembers(bot_id..'Constructor'..v)
 MDER = database:smembers(bot_id..'Manager'..v)
 MOD = database:smembers(bot_id..'Mod:User'..v)
 if k == 1 then
-t = t..'"'..v..'":{"MODEDEV":"'..NAME..'",'
+t = t..'"'..v..'":{"DRAGON":"'..NAME..'",'
 else
-t = t..',"'..v..'":{"MODEDEV":"'..NAME..'",'
+t = t..',"'..v..'":{"DRAGON":"'..NAME..'",'
 end
 if #ASAS ~= 0 then 
 t = t..'"ASAS":['
@@ -734,7 +734,7 @@ end
 send(msg.chat_id_, msg.id_,pre_msg)  
 end
 --------------------------------------------------------------------------------------------------------------
-function SourceMODEDEV(msg,data) -- بداية العمل
+function SourceDRAGON(msg,data) -- بداية العمل
 if msg then
 local text = msg.content_.text_
 --------------------------------------------------------------------------------------------------------------
@@ -832,11 +832,11 @@ else
 if not database:get(bot_id..'Start:Time'..msg.sender_user_id_) then
 local start = database:get(bot_id.."Start:Bot")  
 if start then 
-SourceMODEDEVr = start
+SourceDRAGONr = start
 else
-SourceMODEDEVr = '- هلا عزيزي\n- انا بوت اسمي '..Namebot..'\n- اختصاصي حمايه المجموعات\n من التفليش وبعض الاوامر الخدميه للتسليه والخ…\n-لتفعيلي اتبع الخطوات…↓\n- اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع >{ منشئ او المشرفين } بتفعيلي فقط\n[•𝘊𝘩 𝘴𝘰𝘶𝘳𝘴𝘦•](http://t.me/Revorb0t)'
+SourceDRAGONr = '- هلا عزيزي\n- انا بوت اسمي '..Namebot..'\n- اختصاصي حمايه المجموعات\n من التفليش وبعض الاوامر الخدميه للتسليه والخ…\n-لتفعيلي اتبع الخطوات…↓\n- اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع >{ منشئ او المشرفين } بتفعيلي فقط\n[•𝘊𝘩 𝘴𝘰𝘶𝘳𝘴𝘦•](http://t.me/Revorb0t)'
 end 
-send(msg.chat_id_, msg.id_, SourceMODEDEVr) 
+send(msg.chat_id_, msg.id_, SourceDRAGONr) 
 end
 end
 database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
@@ -879,8 +879,8 @@ end
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,ta) 
 if ta.code_ == 400 or ta.code_ == 5 then
-local MODEDEV_Msg = '\n• فشل ارسال رسالتك لان العضو قام بحظر البوت'
-send(msg.chat_id_, msg.id_,MODEDEV_Msg) 
+local DRAGON_Msg = '\n• فشل ارسال رسالتك لان العضو قام بحظر البوت'
+send(msg.chat_id_, msg.id_,DRAGON_Msg) 
 return false  
 end 
 if text then    
@@ -995,10 +995,10 @@ echo '*•━━━━━━━━━•*\n•{ مـده تـشغيـل الـس
 ]]):read('*all'))  
 end
 if text == '•تحديث السورس•' and SudoBot(msg) then 
-os.execute('rm -rf MODEDEV.lua')
-os.execute('wget https://raw.githubusercontent.com/DEV-SONIC/Egy/main/MODEDEV.lua')
+os.execute('rm -rf DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/DEV-SONIC/Egy/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'• تم تحديث السورس')
-dofile('MODEDEV.lua')  
+dofile('DRAGON.lua')  
 end
 if text == 'الاصدار™' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -1198,19 +1198,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' لا يوجد مجموعات وهميه\n')   
 else
-local MODEDEV = (w + q)
-local sendok = #group - MODEDEV
+local DRAGON = (w + q)
+local sendok = #group - DRAGON
 if q == 0 then
-MODEDEV = ''
+DRAGON = ''
 else
-MODEDEV = '\n تم ازالة » { '..q..' } مجموعهات من البوت'
+DRAGON = '\n تم ازالة » { '..q..' } مجموعهات من البوت'
 end
 if w == 0 then
-MODEDEVk = ''
+DRAGONk = ''
 else
-MODEDEVk = '\n تم ازالة » {'..w..'} مجموعه لان البوت عضو'
+DRAGONk = '\n تم ازالة » {'..w..'} مجموعه لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,'عدد المجموعات الان » { '..#group..' }'..MODEDEVk..''..MODEDEV..'\n  الان عدد المجموعات الحقيقي » { '..sendok..' } مجموعه\n')   
+send(msg.chat_id_, msg.id_,'عدد المجموعات الان » { '..#group..' }'..DRAGONk..''..DRAGON..'\n  الان عدد المجموعات الحقيقي » { '..sendok..' } مجموعه\n')   
 end
 end
 end,nil)
@@ -1325,10 +1325,10 @@ end
 end
 --------------------------------------------------------------------------------------------------------------
 if text and not Special(msg) then  
-local MODEDEV1_Msg = database:get(bot_id.."MODEDEV1:Add:Filter:Rp2"..text..msg.chat_id_)   
-if MODEDEV1_Msg then 
+local DRAGON1_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..text..msg.chat_id_)   
+if DRAGON1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'• العضو> ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'Revorb0t')..') \n •'..MODEDEV1_Msg)
+send(msg.chat_id_, msg.id_,'• العضو> ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'Revorb0t')..') \n •'..DRAGON1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -1578,14 +1578,14 @@ return false
 end
 end 
 --------------------------------------------------------------------------------------------------------------
-if MODEDEV_Msg and not Special(msg) then  
-local MODEDEV_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
-if MODEDEV_Msg then    
+if DRAGON_Msg and not Special(msg) then  
+local DRAGON_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
+if DRAGON_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0,"• عضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n•["..MODEDEV_Msg.."] \n") 
+send(msg.chat_id_,0,"• عضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n•["..DRAGON_Msg.."] \n") 
 else
-send(msg.chat_id_,0,"• عضو : {["..data.first_name_.."](T.ME/Revorb0t)}\n•["..MODEDEV_Msg.."] \n") 
+send(msg.chat_id_,0,"• عضو : {["..data.first_name_.."](T.ME/Revorb0t)}\n•["..DRAGON_Msg.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -2287,20 +2287,20 @@ send(msg.chat_id_, msg.id_,'• عذراً عـليك الاشـتࢪاك في �
 end
 return false
 end
-os.execute('rm -rf MODEDEV.lua')
-os.execute('wget https://raw.githubusercontent.com/DEV-SONIC/Egy/main/MODEDEV.lua')
+os.execute('rm -rf DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/DEV-SONIC/Egy/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'• تم تحديث السورس')
-dofile('MODEDEV.lua')  
+dofile('DRAGON.lua')  
 end
 if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '• تم تعطيل الزخرفه')
-database:set(bot_id.."MODEDEV:zhrf_Bots"..msg.chat_id_,"close")
+database:set(bot_id.."DRAGON:zhrf_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'• تم تفعيل الزخرفه')
-database:set(bot_id.."MODEDEV:zhrf_Bots"..msg.chat_id_,"open")
+database:set(bot_id.."DRAGON:zhrf_Bots"..msg.chat_id_,"open")
 end
-if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."MODEDEV:zhrf_Bots"..msg.chat_id_) == "open" then
+if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."DRAGON:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://black-source.tk/BlackTeAM/frills.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
@@ -2314,13 +2314,13 @@ send(msg.chat_id_, msg.id_, t..'*܀⠤⠤⠤⠤⠤⠤܀ٴ*\n•اضغط على �
 end
 if text == "تعطيل معاني الاسماء" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '⋆ ⇽ تم تعطيل معاني الاسماء')
-database:set(bot_id.."MODEDEV:Name_Bots"..msg.chat_id_,"close")
+database:set(bot_id.."DRAGON:Name_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل معاني الاسماء" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'⋆ ⇽ تم تفعيل معاني الاسماء')
-database:set(bot_id.."MODEDEV:Name_Bots"..msg.chat_id_,"open")
+database:set(bot_id.."DRAGON:Name_Bots"..msg.chat_id_,"open")
 end
-if text and text:match("^معني (.*)$") and database:get(bot_id.."MODEDEV:Name_Bots"..msg.chat_id_) == "open" then
+if text and text:match("^معني (.*)$") and database:get(bot_id.."DRAGON:Name_Bots"..msg.chat_id_) == "open" then
 local TextName = text:match("^معني (.*)$")
 gk = https.request('http://sonicx.ml/Api/Name.php?Name='..URL.escape(TextName)..'')
 br = JSON.decode(gk)
@@ -2328,13 +2328,13 @@ send(msg.chat_id_, msg.id_,br.meaning)
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '• تم تعطيل الابراج')
-database:set(bot_id.."MODEDEV:brj_Bots"..msg.chat_id_,"close")
+database:set(bot_id.."DRAGON:brj_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'• تم تفعيل الابراج')
-database:set(bot_id.."MODEDEV:brj_Bots"..msg.chat_id_,"open")
+database:set(bot_id.."DRAGON:brj_Bots"..msg.chat_id_,"open")
 end
-if text and text:match("^برج (.*)$") and database:get(bot_id.."MODEDEV:brj_Bots"..msg.chat_id_) == "open" then
+if text and text:match("^برج (.*)$") and database:get(bot_id.."DRAGON:brj_Bots"..msg.chat_id_) == "open" then
 local Textbrj = text:match("^برج (.*)$")
 gk = https.request('https://mode-dev.tk/Api2/Modbr.php?br='..URL.escape(Textbrj)..'')
 br = JSON.decode(gk)
@@ -2347,13 +2347,13 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == "تعطيل حساب العمر" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '• تم تعطيل حساب العمر')
-database:set(bot_id.."MODEDEV:age_Bots"..msg.chat_id_,"close")
+database:set(bot_id.."DRAGON:age_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل حساب العمر" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'• تم تفعيل حساب العمر')
-database:set(bot_id.."MODEDEV:age_Bots"..msg.chat_id_,"open")
+database:set(bot_id.."DRAGON:age_Bots"..msg.chat_id_,"open")
 end
-if text and text:match("^احسب (.*)$") and database:get(bot_id.."MODEDEV:age_Bots"..msg.chat_id_) == "open" then
+if text and text:match("^احسب (.*)$") and database:get(bot_id.."DRAGON:age_Bots"..msg.chat_id_) == "open" then
 local Textage = text:match("^احسب (.*)$")
 ge = https.request('https://mode-dev.tk/Api1/niggaapi.php?age='..URL.escape(Textage)..'')
 ag = JSON.decode(ge)
@@ -2490,22 +2490,22 @@ if database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 if text and text:match("^كتم اسم (.*)$") and Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local BlNe = text:match("^كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, '•تم كتم الاسم '..BlNe)
-database:sadd(bot_id.."MODEDEV:blocname"..msg.chat_id_, BlNe)
+database:sadd(bot_id.."DRAGON:blocname"..msg.chat_id_, BlNe)
 end
 
 if text and text:match("^الغاء كتم اسم (.*)$") and Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local delBn = text:match("^الغاء كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, '•تم الغاء كتم الاسم '..delBn)
-database:srem(bot_id.."MODEDEV:blocname"..msg.chat_id_, delBn)
+database:srem(bot_id.."DRAGON:blocname"..msg.chat_id_, delBn)
 end
 
 if text == "مسح الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
-database:del(bot_id.."MODEDEV:blocname"..msg.chat_id_)
+database:del(bot_id.."DRAGON:blocname"..msg.chat_id_)
 texts = "• تم مسح الاسماء المكتومه "
 send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
-local All_name = database:smembers(bot_id.."MODEDEV:blocname"..msg.chat_id_)
+local All_name = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_)
 t = "\n•قائمة الاسماء المكتومه \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
@@ -2529,7 +2529,7 @@ function BGBBB_name(t1,t2)
 if t2.id_ then 
 name_Black = ((t2.first_name_ or "") .. (t2.last_name_ or ""))
 if name_Black then 
-names_Black = database:smembers(bot_id.."MODEDEV:blocname"..msg.chat_id_) or ""
+names_Black = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_) or ""
 if names_Black and names_Black[1] then 
 for i=1,#names_Black do 
 if name_Black:match("(.*)("..names_Black[i]..")(.*)") then 
@@ -2546,16 +2546,16 @@ if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 if text and text:match("^وضع توحيد (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 local teh = text:match("^وضع توحيد (.*)$")
 send(msg.chat_id_, msg.id_,'•تم تعيين '..teh..' كتوحيد للمجموعه')
-database:set(bot_id.."MODEDEV:teh"..msg.chat_id_,teh)
+database:set(bot_id.."DRAGON:teh"..msg.chat_id_,teh)
 end
 if text and text:match("^تعين عدد الكتم (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 local nump = text:match("^تعين عدد الكتم (.*)$")
 send(msg.chat_id_, msg.id_,'•تم تعين  '..nump..' عدد الكتم')
-database:set(bot_id.."MODEDEV:nump"..msg.chat_id_,nump)
+database:set(bot_id.."DRAGON:nump"..msg.chat_id_,nump)
 end
 if text == "التوحيد" then
-local s1 = database:get(bot_id.."MODEDEV:teh"..msg.chat_id_) or "لا يوجد توحيد"
-local s2 = database:get(bot_id.."MODEDEV:nump"..msg.chat_id_) or 5
+local s1 = database:get(bot_id.."DRAGON:teh"..msg.chat_id_) or "لا يوجد توحيد"
+local s2 = database:get(bot_id.."DRAGON:nump"..msg.chat_id_) or 5
 send(msg.chat_id_, msg.id_,'•التوحيد هو '..s1..'\n • عدد الكتم هو : '..s2)
 end
 end
@@ -2568,20 +2568,20 @@ send(msg.chat_id_, msg.id_, '•تم تعطيل التوحيد')
 database:set(bot_id.."kt:twh:stats"..msg.chat_id_,"close")
 end
 if not Constructor(msg) then
-if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open"  and database:get(bot_id.."MODEDEV:teh"..msg.chat_id_) then 
+if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open"  and database:get(bot_id.."DRAGON:teh"..msg.chat_id_) then 
 id = msg.sender_user_id_
 function keko_tsahke_new(tshake1,tshake2)
 if tshake2 and tshake2.first_name_ then 
-if tshake2.first_name_:match("(.*)"..database:get(bot_id.."MODEDEV:teh"..msg.chat_id_).."(.*)") then 
-database:srem(bot_id.."MODEDEV:Muted:User"..msg.chat_id_, msg.sender_user_id_)
+if tshake2.first_name_:match("(.*)"..database:get(bot_id.."DRAGON:teh"..msg.chat_id_).."(.*)") then 
+database:srem(bot_id.."DRAGON:Muted:User"..msg.chat_id_, msg.sender_user_id_)
 else
-local tshake_nnn = database:get(bot_id.."MODEDEV:nump"..msg.chat_id_) or 5
-local tshake_nnn2 = database:get(bot_id.."MODEDEV:nump22"..msg.chat_id_..msg.sender_user_id_) or 0
+local tshake_nnn = database:get(bot_id.."DRAGON:nump"..msg.chat_id_) or 5
+local tshake_nnn2 = database:get(bot_id.."DRAGON:nump22"..msg.chat_id_..msg.sender_user_id_) or 0
 if (tonumber(tshake_nnn2) == tonumber(tshake_nnn) or tonumber(tshake_nnn2) > tonumber(tshake_nnn)) then 
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, msg.sender_user_id_)
 else 
-database:incrby(bot_id.."MODEDEV:nump22"..msg.chat_id_..msg.sender_user_id_,1)
-send(msg.chat_id_, msg.id_, "•عزيزي >>["..tshake2.username_.."](https://t.me/"..(tshake2.username_ or "Revorb0t")..")\n•عليك وضع التوحيد ⪼ {`"..database:get(bot_id.."MODEDEV:teh"..msg.chat_id_).."`} بجانب اسمك\n•عدد المحاولات المتبقيه {"..(tonumber(tshake_nnn) - tonumber(tshake_nnn2)).."}")
+database:incrby(bot_id.."DRAGON:nump22"..msg.chat_id_..msg.sender_user_id_,1)
+send(msg.chat_id_, msg.id_, "•عزيزي >>["..tshake2.username_.."](https://t.me/"..(tshake2.username_ or "Revorb0t")..")\n•عليك وضع التوحيد ⪼ {`"..database:get(bot_id.."DRAGON:teh"..msg.chat_id_).."`} بجانب اسمك\n•عدد المحاولات المتبقيه {"..(tonumber(tshake_nnn) - tonumber(tshake_nnn2)).."}")
 end
 end
 end
@@ -2601,15 +2601,15 @@ if text and database:get(bot_id.."Ttn:BBE:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then
-local MODEDEVChengName = database:get(bot_id.."MODEDEV:Cheng:Name"..data.id_)
+local DRAGONChengName = database:get(bot_id.."DRAGON:Cheng:Name"..data.id_)
 if not data.first_name_ then 
-if MODEDEVChengName then 
-send(msg.chat_id_, msg.id_, " خوش معرف جان ["..MODEDEVChengName..']')
-database:del(bot_id.."MODEDEV:Cheng:Name"..data.id_) 
+if DRAGONChengName then 
+send(msg.chat_id_, msg.id_, " خوش معرف جان ["..DRAGONChengName..']')
+database:del(bot_id.."DRAGON:Cheng:Name"..data.id_) 
 end
 end
 if data.first_name_ then 
-if MODEDEVChengName ~= data.first_name_ then 
+if DRAGONChengName ~= data.first_name_ then 
 local Text = {
   "جان اسمك خوش اسم ",
 "ليش غيرت اسمك يحلو ",
@@ -2617,7 +2617,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."MODEDEV:Cheng:Name"..data.id_, data.first_name_) 
+database:set(bot_id.."DRAGON:Cheng:Name"..data.id_, data.first_name_) 
 end
 end
 end
@@ -2635,15 +2635,15 @@ if text and database:get(bot_id.."Ttn:Userr:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then
-local MODEDEVChengUserName = database:get(bot_id.."MODEDEV:Cheng:UserName"..data.id_)
+local DRAGONChengUserName = database:get(bot_id.."DRAGON:Cheng:UserName"..data.id_)
 if not data.username_ then 
-if MODEDEVChengUserName then 
-send(msg.chat_id_, msg.id_, 1, "هذا الشخص حذف معرفه      \n هاذه معرفه  : [@"..MODEDEVChengUserName..']')
-database:del(bot_id.."MODEDEV:Cheng:UserName"..data.id_) 
+if DRAGONChengUserName then 
+send(msg.chat_id_, msg.id_, 1, "هذا الشخص حذف معرفه      \n هاذه معرفه  : [@"..DRAGONChengUserName..']')
+database:del(bot_id.."DRAGON:Cheng:UserName"..data.id_) 
 end
 end
 if data.username_ then 
-if MODEDEVChengUserName ~= data.username_ then 
+if DRAGONChengUserName ~= data.username_ then 
 local Text = {
 ' ايه دا غيرت معرفك ليه🌞😹😹😹',
 "هددوك ولا اي مغير معرفك ؟😂😂",
@@ -2653,7 +2653,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."MODEDEV:Cheng:UserName"..data.id_, data.username_) 
+database:set(bot_id.."DRAGON:Cheng:UserName"..data.id_, data.username_) 
 end
 end
 end
@@ -2671,15 +2671,15 @@ if text and database:get(bot_id.."Ttn:Ph:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then 
-local MODEDEVChengPhoto = database:get(bot_id.."MODEDEV:Cheng:Photo"..data.id_)
+local DRAGONChengPhoto = database:get(bot_id.."DRAGON:Cheng:Photo"..data.id_)
 if not data.profile_photo_ then 
-if MODEDEVChengPhoto then 
+if DRAGONChengPhoto then 
 send(msg.chat_id_, msg.id_, "حذف كل صوره الحلو 😂👌🏻")
-database:del(bot_id.."MODEDEV:Cheng:Photo"..data.id_) 
+database:del(bot_id.."DRAGON:Cheng:Photo"..data.id_) 
 end
 end
 if data.profile_photo_.big_.persistent_id_ then 
-if MODEDEVChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
+if DRAGONChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
 local Text = {
   "ايه الصوره القمر دي ",
   "صورتك الجديده جميله ❄️",
@@ -2689,7 +2689,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."MODEDEV:Cheng:Photo"..data.id_, data.profile_photo_.big_.persistent_id_) 
+database:set(bot_id.."DRAGON:Cheng:Photo"..data.id_, data.profile_photo_.big_.persistent_id_) 
 end
 end
 end
@@ -3609,7 +3609,7 @@ end,nil)
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and SudoBot(msg) then    
-dofile('MODEDEV.lua')  
+dofile('DRAGON.lua')  
 send(msg.chat_id_, msg.id_, '•  تم تحديث الملفات') 
 end 
 if text == ("مسح قائمه العام") and SudoBot(msg) then
@@ -3963,7 +3963,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if SudoBot(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_Modedev/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_DRAGON/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -4001,11 +4001,11 @@ t = " • الملف » "..file.."\n • تم تعطيل ملف \n"
 else
 t = " • بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_Modedev/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_DRAGON/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
-dofile('MODEDEV.lua')  
+dofile('DRAGON.lua')  
 else
 send(msg.chat_id_, msg.id_," • عذرا الملف لايدعم سورس ريفور \n") 
 end
@@ -4021,13 +4021,13 @@ t = " • بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " • الملف » "..file.."\n • تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_Modedev/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/PHFWHDHD/Files_DRAGON/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
-dofile('MODEDEV.lua')  
+dofile('DRAGON.lua')  
 else
 send(msg.chat_id_, msg.id_," • عذرا الملف لايدعم سورس ريفور \n") 
 end
@@ -5685,7 +5685,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'•  𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒓𝒆𝒗𝒐𝒓 •\n• لايمكنك استخدام البوت •\n• عليك الاشتراك في القناة •\n• اشترك اولا ['..database:get(bot_id..'add:ch:username')..'•]')
+send(msg.chat_id_, msg.id_,'•  𝑾𝒆𝒍??𝒐𝒎𝒆 𝒓𝒆𝒗𝒐𝒓 •\n• لايمكنك استخدام البوت •\n• عليك الاشتراك في القناة •\n• اشترك اولا ['..database:get(bot_id..'add:ch:username')..'•]')
 end
 return false
 end
@@ -7744,42 +7744,42 @@ end
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Manager(msg)  then       
 send(msg.chat_id_, msg.id_,"•ارسل الكلمه لمنعها")  
-database:set(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
+database:set(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
 return false  
 end    
 if text then   
-local tsssst = database:get(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local tsssst = database:get(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
 send(msg.chat_id_, msg.id_,"ارسل التحذير عند ارسال الكلمه")  
-database:set(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
-database:set(bot_id.."MODEDEV1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
-database:sadd(bot_id.."MODEDEV1:List:Filter"..msg.chat_id_,text)  
+database:set(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
+database:set(bot_id.."DRAGON1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
+database:sadd(bot_id.."DRAGON1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 if text then  
-local test = database:get(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test == "repp" then  
 send(msg.chat_id_, msg.id_,"•تم منع الكلمه مع التحذير")  
-database:del(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-local test = database:get(bot_id.."MODEDEV1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."DRAGON1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if text then   
-database:set(bot_id.."MODEDEV1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
+database:set(bot_id.."DRAGON1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
 end  
-database:del(bot_id.."MODEDEV1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."DRAGON1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 return false  end  
 end
 
 if text == "الغاء منع" and msg.reply_to_message_id_ == 0 and Manager(msg) then    
 send(msg.chat_id_, msg.id_,"•ارسل الكلمه الان")  
-database:set(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
+database:set(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
 return false  end
 if text then 
-local test = database:get(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test and test == "reppp" then   
 send(msg.chat_id_, msg.id_,"•تم الغاء منعها ")  
-database:del(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."MODEDEV1:Add:Filter:Rp2"..text..msg.chat_id_)  
-database:srem(bot_id.."MODEDEV1:List:Filter"..msg.chat_id_,text)  
+database:del(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."DRAGON1:Add:Filter:Rp2"..text..msg.chat_id_)  
+database:srem(bot_id.."DRAGON1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 
@@ -7840,21 +7840,21 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 
 if text == "مسح قائمه المنع"and Manager(msg) then   
-local list = database:smembers(bot_id.."MODEDEV1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
-database:del(bot_id.."MODEDEV1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."MODEDEV1:Add:Filter:Rp2"..v..msg.chat_id_)  
-database:srem(bot_id.."MODEDEV1:List:Filter"..msg.chat_id_,v)  
+database:del(bot_id.."DRAGON1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)  
+database:srem(bot_id.."DRAGON1:List:Filter"..msg.chat_id_,v)  
 end  
 send(msg.chat_id_, msg.id_,"•تم مسح قائمه المنع")  
 end
 
 if text == "قائمه المنع" and Manager(msg) then   
-local list = database:smembers(bot_id.."MODEDEV1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
 t = "\n•قائمة المنع \n *܀⠤⠤⠤⠤⠤⠤܀ٴ*\n"
 for k,v in pairs(list) do  
-local MODEDEV_Msg = database:get(bot_id.."MODEDEV1:Add:Filter:Rp2"..v..msg.chat_id_)   
-t = t..""..k.."- "..v.." > {"..MODEDEV_Msg.."}\n"    
+local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
+t = t..""..k.."- "..v.." > {"..DRAGON_Msg.."}\n"    
 end  
 if #list == 0 then  
 t = "•لا يوجد كلمات ممنوعه"  
@@ -8522,7 +8522,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text and text:match('^مسح (%d+)$') and Constructor(msg) and database:get(bot_id..'Lock:delmsg'..msg.chat_id_) then                
-if not database:get(bot_id..'MODEDEV:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then           
+if not database:get(bot_id..'DRAGON:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then           
 local Number = tonumber(text:match('^مسح (%d+)$')) 
 if Number > 1000 then 
 send(msg.chat_id_, msg.id_,'• لا تستطيع مسح اكثر من *~ 1000* رساله') 
@@ -8534,7 +8534,7 @@ DeleteMessage(msg.chat_id_,{[0]=Message})
 Message = Message - 1048576
 end
 send(msg.chat_id_, msg.id_,'• تم مسح *~ '..Number..'* رساله .')  
-database:setex(bot_id..'MODEDEV:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true)
+database:setex(bot_id..'DRAGON:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true)
 end
 end
 if text == "امسح" and Manager(msg) then
@@ -8596,7 +8596,7 @@ end
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'ريفور').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'ريفور')
-local MODEDEV_Msg = {
+local DRAGON_Msg = {
 'ۿۧهلا ؏ـمࢪي .',
 '    اؤمرني',
 'ۿۧاا قلبي .',
@@ -8606,7 +8606,7 @@ local MODEDEV_Msg = {
 'عيونه',
 'ۿۧها ححب  .',
 }
-send(msg.chat_id_, msg.id_,'['..MODEDEV_Msg[math.random(#MODEDEV_Msg)]..']') 
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
 return false
 end
 if text=="اذاعه خاص" and msg.reply_to_message_id_ == 0 and Sudo(msg) then 
@@ -8715,10 +8715,10 @@ end
 return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
-},function(ta,MODEDEV)
+},function(ta,DRAGON)
 local t = "\n*• قائمة الاعضاء \n *܀⠤⠤⠤⠤⠤⠤܀ٴ*\n*"
 x = 0
-local list = MODEDEV.members_
+local list = DRAGON.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
@@ -8743,10 +8743,10 @@ if database:get(bot_id.."chat:tagall"..msg.chat_id_) then  return send(msg.chat_
 database:setex(bot_id..'chat:tagall'..msg.chat_id_,600,true)
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(argg,dataa) 
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = dataa.member_count_
-},function(ta,MODEDEV)
+},function(ta,DRAGON)
 x = 0
 tags = 0
-local list = MODEDEV.members_
+local list = DRAGON.members_
 for k, v in pairs(list) do
 tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data)
 if x == 5 or x == tags or k == 0 then
@@ -8779,10 +8779,10 @@ end
 return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
-},function(ta,MODEDEV)
+},function(ta,DRAGON)
 local t = "\n*• قائمة الاعضاء \n *܀⠤⠤⠤⠤⠤⠤܀ٴ*\n*"
 x = 0
-local list = MODEDEV.members_
+local list = DRAGON.members_
 for k, v in pairs(list) do
 tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data)
 x = x + 1
@@ -8809,10 +8809,10 @@ return false
 end
 taglimit = text:match("^تاك ل (%d+)$"):gsub('تاك ل ','')
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = taglimit
-},function(ta,MODEDEV)
+},function(ta,DRAGON)
 local t = "\n*• قائمة الاعضاء \n *܀⠤⠤⠤⠤⠤⠤܀ٴ*\n*"
 x = 0
-local list = MODEDEV.members_
+local list = DRAGON.members_
 for k, v in pairs(list) do
 tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data)
 x = x + 1
@@ -9010,36 +9010,36 @@ end
 end
 
 if text and text:match("^(.*)$") then
-if database:get(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_, '\n • ارسل لي الكلمه الان')
-database:set(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
-database:set(bot_id.."botss:MODEDEV:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
-database:sadd(bot_id.."botss:MODEDEV:List:Rd:Sudo", text)
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
+database:set(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
+database:sadd(bot_id.."botss:DRAGON:List:Rd:Sudo", text)
 return false end
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id.."botss:MODEDEV:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if database:get(bot_id.."botss:DRAGON:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_,"• تم حذف الرد من الردود المتعدده")
-database:del(bot_id..'botss:MODEDEV:Add:Rd:Sudo:Text'..text)
-database:del(bot_id..'botss:MODEDEV:Add:Rd:Sudo:Text1'..text)
-database:del(bot_id..'botss:MODEDEV:Add:Rd:Sudo:Text2'..text)
-database:del(bot_id.."botss:MODEDEV:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
-database:srem(bot_id.."botss:MODEDEV:List:Rd:Sudo", text)
+database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text'..text)
+database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text1'..text)
+database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text2'..text)
+database:del(bot_id.."botss:DRAGON:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
+database:srem(bot_id.."botss:DRAGON:List:Rd:Sudo", text)
 return false
 end
 end
 if text == ("مسح الردود المتعدده") and SudoBot(msg) then 
-local list = database:smembers(bot_id.."botss:MODEDEV:List:Rd:Sudo")
+local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
 for k,v in pairs(list) do  
-database:del(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text"..v) 
-database:del(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text1"..v) 
-database:del(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text2"..v)   
-database:del(bot_id.."botss:MODEDEV:List:Rd:Sudo")
+database:del(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text"..v) 
+database:del(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text1"..v) 
+database:del(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text2"..v)   
+database:del(bot_id.."botss:DRAGON:List:Rd:Sudo")
 end
 send(msg.chat_id_, msg.id_,"• تم حذف الردود المتعدده")
 end
 if text == ("الردود المتعدده") and SudoBot(msg) then 
-local list = database:smembers(bot_id.."botss:MODEDEV:List:Rd:Sudo")
+local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
 text = "\nقائمة الردود المتعدده \n*܀⠤⠤⠤⠤⠤⠤܀ٴ*\n"
 for k,v in pairs(list) do
 db = "رساله "
@@ -9051,53 +9051,53 @@ end
 send(msg.chat_id_, msg.id_,"["..text.."]")
 end
 if text == "اضف رد متعدد" and SudoBot(msg) then 
-database:set(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_,"\n •  حسنآ ارسل الرد الذي تريد\n•  اضافتة يمكنك اضافـة\n•  3 ردود علئ رد واحد\n")
 end
 if text == "حذف رد متعدد" and SudoBot(msg) then 
-database:set(bot_id.."botss:MODEDEV:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
+database:set(bot_id.."botss:DRAGON:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_,"•  ارسل الان الكلمه لحذفها")
 end
 if text then  
-local test = database:get(bot_id.."botss:MODEDEV:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-database:set(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
+local test = database:get(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text"..test, text)  
+database:set(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text"..test, text)  
 end  
 send(msg.chat_id_, msg.id_,"• تم حفظ الرد الاول ارسل الرد الثاني")
 return false  
 end  
 end
 if text then  
-local test = database:get(bot_id.."botss:MODEDEV:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-database:set(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
+local test = database:get(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text1"..test, text)  
+database:set(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text1"..test, text)  
 end  
 send(msg.chat_id_, msg.id_,"• تم حفظ الرد الثاني ارسل الرد الثالث")
 return false  
 end  
 end
 if text then  
-local test = database:get(bot_id.."botss:MODEDEV:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-database:set(bot_id.."botss:MODEDEV:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
+local test = database:get(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text2"..test, text)  
+database:set(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text2"..test, text)  
 end
 
 send(msg.chat_id_, msg.id_,"• تم حفظ الردود")
@@ -9105,9 +9105,9 @@ return false
 end  
 end
 if text then
-local Text = database:get(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text"..text)   
-local Text1 = database:get(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text1"..text)   
-local Text2 = database:get(bot_id.."botss:MODEDEV:Add:Rd:Sudo:Text2"..text)   
+local Text = database:get(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text"..text)   
+local Text1 = database:get(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text1"..text)   
+local Text2 = database:get(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text2"..text)   
 if Text or Text1 or Text2 then 
 local texting = {
 Text,
@@ -9587,7 +9587,7 @@ send(msg.chat_id_, msg.id_,' البوت ليس مشرف يرجى ترقيتي !'
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n• العضو > ['..data.first_name_..'](t.me/'..(data.username_ or 'MODEDEV')..') '
+usertext = '\n• العضو > ['..data.first_name_..'](t.me/'..(data.username_ or 'DRAGON')..') '
 status  = '\n• الايدي > '..result.sender_user_id_..'\n•تم ضافه {'..timsh..'} كلقب له'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
@@ -10116,19 +10116,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,'لا يوجد مجموعات وهميه في البوت\n')   
 else
-local MODEDEV = (w + q)
-local sendok = #group - MODEDEV
+local DRAGON = (w + q)
+local sendok = #group - DRAGON
 if q == 0 then
-MODEDEV = ''
+DRAGON = ''
 else
-MODEDEV = '\n- تم ازالة » { '..q..' } مجموعات من البوت'
+DRAGON = '\n- تم ازالة » { '..q..' } مجموعات من البوت'
 end
 if w == 0 then
-MODEDEVk = ''
+DRAGONk = ''
 else
-MODEDEVk = '\n- تم ازالة » {'..w..'} مجموعه لان البوت عضو'
+DRAGONk = '\n- تم ازالة » {'..w..'} مجموعه لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' عدد المجموعات الان » { '..#group..' }'..MODEDEVk..''..MODEDEV..'\n*- الان عدد المجموعات الحقيقي » { '..sendok..' } مجموعات\n')   
+send(msg.chat_id_, msg.id_,' عدد المجموعات الان » { '..#group..' }'..DRAGONk..''..DRAGON..'\n*- الان عدد المجموعات الحقيقي » { '..sendok..' } مجموعات\n')   
 end
 end
 end,nil)
@@ -10140,7 +10140,7 @@ end
 if text and text:match("^(gpinfo)$") or text and text:match("^معلومات المجموعه$") then
 function gpinfo(arg,data)
 -- vardump(data) 
-MODEDEVdx(msg.chat_id_, msg.id_, '• ايدي المجموعة > ( '..msg.chat_id_..' )\n عدد الادمنيه > ( *'..data.administrator_count_..' )*\n• عدد المحظورين > ( *'..data.kicked_count_..' )*\n• عدد الاعضاء > ( *'..data.member_count_..' )*\n', 'md') 
+DRAGONdx(msg.chat_id_, msg.id_, '• ايدي المجموعة > ( '..msg.chat_id_..' )\n عدد الادمنيه > ( *'..data.administrator_count_..' )*\n• عدد المحظورين > ( *'..data.kicked_count_..' )*\n• عدد الاعضاء > ( *'..data.member_count_..' )*\n', 'md') 
 end 
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
@@ -11733,8 +11733,8 @@ local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_)
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "kick" then   
 https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-MODEDEV = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(MODEDEV)
+DRAGON = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(DRAGON)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -11762,7 +11762,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lock_links' and Mod(data) then
 local Textedit = '• تم تعطيل الرابط '
-redis:del(bot_id..'MODEDEV:Link_Group'..Chat_id) 
+redis:del(bot_id..'DRAGON:Link_Group'..Chat_id) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11782,7 +11782,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockwelcome' and Mod(data) then
 local Textedit = '• تم تعطيل الترحيب '
-redis:del(bot_id..'MODEDEV:Chek:Welcome'..Chat_id)
+redis:del(bot_id..'DRAGON:Chek:Welcome'..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11792,7 +11792,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockrepall' and Mod(data) then
 local Textedit = '• تم تعطيل الردود العامه '
-redis:set(bot_id..'MODEDEV:Reply:Sudo'..Chat_id,true)   
+redis:set(bot_id..'DRAGON:Reply:Sudo'..Chat_id,true)   
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11802,7 +11802,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockide' and Mod(data) then
 local Textedit = '• تم تعطيل الايدي '
-redis:set(bot_id..'MODEDEV:Lock:Id:Photo'..Chat_id,true) 
+redis:set(bot_id..'DRAGON:Lock:Id:Photo'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11812,7 +11812,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockidephoto' and Mod(data) then
 local Textedit = '• تم تعطيل الايدي بالصوره '
-redis:set(bot_id..'MODEDEV:Lock:Id:Py:Photo'..Chat_id,true) 
+redis:set(bot_id..'DRAGON:Lock:Id:Py:Photo'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11822,7 +11822,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockkiked' and Mod(data) then
 local Textedit = '• تم تعطيل الحظر '
-redis:set(bot_id..'MODEDEV:Lock:Ban:Group'..Chat_id,'true')
+redis:set(bot_id..'DRAGON:Lock:Ban:Group'..Chat_id,'true')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11832,7 +11832,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/locksetm' and Mod(data) then
 local Textedit = '• تم تعطيل الرفع '
-redis:set(bot_id..'MODEDEV:Cheking:Seted'..Chat_id,'true')
+redis:set(bot_id..'DRAGON:Cheking:Seted'..Chat_id,'true')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11862,7 +11862,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockkikedme' and Mod(data) then
 local Textedit = '• تم تعطيل اطردني '
-redis:set(bot_id..'MODEDEV:Cheking:Kick:Me:Group'..Chat_id,true)  
+redis:set(bot_id..'DRAGON:Cheking:Kick:Me:Group'..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11872,7 +11872,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockgames' and Mod(data) then
 local Textedit = '• تم تعطيل الالعاب '
-redis:del(bot_id..'MODEDEV:Lock:Game:Group'..Chat_id)  
+redis:del(bot_id..'DRAGON:Lock:Game:Group'..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11882,7 +11882,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockrepgr' and Mod(data) then
 local Textedit = '• تم تعطيل الردود '
-redis:set(bot_id..'MODEDEV:Reply:Manager'..Chat_id,true)  
+redis:set(bot_id..'DRAGON:Reply:Manager'..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11903,7 +11903,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlock_links' and Mod(data) then
 local Textedit = '• تم تفعيل الرابط '
-redis:set(bot_id..'MODEDEV:Link_Group'..Chat_id,true) 
+redis:set(bot_id..'DRAGON:Link_Group'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11923,7 +11923,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockwelcome' and Mod(data) then
 local Textedit = '• تم تفعيل الترحيب '
-redis:set(bot_id..'MODEDEV:Chek:Welcome'..Chat_id,true) 
+redis:set(bot_id..'DRAGON:Chek:Welcome'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11933,7 +11933,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockrepall' and Mod(data) then
 local Textedit = '• تم تفعيل الردود العامه '
-redis:del(bot_id..'MODEDEV:Reply:Sudo'..Chat_id)  
+redis:del(bot_id..'DRAGON:Reply:Sudo'..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11943,7 +11943,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockide' and Mod(data) then
 local Textedit = '• تم تفعيل الايدي '
-redis:del(bot_id..'MODEDEV:Lock:Id:Photo'..Chat_id) 
+redis:del(bot_id..'DRAGON:Lock:Id:Photo'..Chat_id) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11953,7 +11953,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockidephoto' and Mod(data) then
 local Textedit = '• تم تفعيل الايدي بالصوره '
-redis:del(bot_id..'MODEDEV:Lock:Id:Py:Photo'..Chat_id)  
+redis:del(bot_id..'DRAGON:Lock:Id:Py:Photo'..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11963,7 +11963,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockkiked' and Mod(data) then
 local Textedit = '• تم تفعيل الحظر '
-redis:del(bot_id..'MODEDEV:Lock:Ban:Group'..Chat_id)
+redis:del(bot_id..'DRAGON:Lock:Ban:Group'..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -11973,7 +11973,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlocksetm' and Mod(data) then
 local Textedit = '• تم تفعيل الرفع '
-redis:del(bot_id..'MODEDEV:Cheking:Seted'..Chat_id)
+redis:del(bot_id..'DRAGON:Cheking:Seted'..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12003,7 +12003,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockkikedme' and Mod(data) then
 local Textedit = '• تم تفعيل اطردني '
-redis:del(bot_id..'MODEDEV:Cheking:Kick:Me:Group'..Chat_id)  
+redis:del(bot_id..'DRAGON:Cheking:Kick:Me:Group'..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12013,7 +12013,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockgames' and Mod(data) then
 local Textedit = '• تم تفعيل الالعاب '
-redis:set(bot_id..'MODEDEV:Lock:Game:Group'..Chat_id,true) 
+redis:set(bot_id..'DRAGON:Lock:Game:Group'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12023,7 +12023,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockrepgr' and Mod(data) then
 local Textedit = '• تم تفعيل الردود '
-redis:del(bot_id..'MODEDEV:Reply:Manager'..Chat_id)  
+redis:del(bot_id..'DRAGON:Reply:Manager'..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12085,7 +12085,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/lockjoine' and Mod(data) then
 local Textedit = '• تم قفل الاضافه '
-redis:set(bot_id.."MODEDEV:Lock:AddMempar"..Chat_id,"kick")  
+redis:set(bot_id.."DRAGON:Lock:AddMempar"..Chat_id,"kick")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12095,7 +12095,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockchat' and Mod(data) then
 local Textedit = '• تم قفل الدردشه '
-redis:set(bot_id.."MODEDEV:Lock:text"..Chat_id,true) 
+redis:set(bot_id.."DRAGON:Lock:text"..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12105,7 +12105,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lock_joine' and Mod(data) then
 local Textedit = '• تم قفل الدخول '
-redis:set(bot_id.."MODEDEV:Lock:Join"..Chat_id,"kick")  
+redis:set(bot_id.."DRAGON:Lock:Join"..Chat_id,"kick")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12115,7 +12115,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockbots' and Mod(data) then
 local Textedit = '• تم قفل البوتات '
-redis:set(bot_id.."MODEDEV:Lock:Bot:kick"..Chat_id,"del")  
+redis:set(bot_id.."DRAGON:Lock:Bot:kick"..Chat_id,"del")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12125,7 +12125,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/locktags' and Mod(data) then
 local Textedit = '• تم قفل الاشعارات '
-redis:set(bot_id.."MODEDEV:Lock:tagservr"..Chat_id,true)  
+redis:set(bot_id.."DRAGON:Lock:tagservr"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12135,7 +12135,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockedit' and Mod(data) then
 local Textedit = '• تم قفل التعديل '
-redis:set(bot_id.."MODEDEV:Lock:edit"..Chat_id,true) 
+redis:set(bot_id.."DRAGON:Lock:edit"..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12145,7 +12145,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/locklink' and Mod(data) then
 local Textedit = '• تم قفل الروابط '
-redis:set(bot_id.."MODEDEV:Lock:Link"..Chat_id,"del")  
+redis:set(bot_id.."DRAGON:Lock:Link"..Chat_id,"del")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12155,7 +12155,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockusername' and Mod(data) then
 local Textedit = '• تم قفل المعرفات '
-redis:set(bot_id.."MODEDEV:Lock:User:Name"..Chat_id,"del")  
+redis:set(bot_id.."DRAGON:Lock:User:Name"..Chat_id,"del")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12165,7 +12165,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/locktag' and Mod(data) then
 local Textedit = '• تم قفل التاك '
-redis:set(bot_id.."MODEDEV:Lock:hashtak"..Chat_id,"del")  
+redis:set(bot_id.."DRAGON:Lock:hashtak"..Chat_id,"del")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12175,7 +12175,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/locksticar' and Mod(data) then
 local Textedit = '• تم قفل الملصقات '
-redis:set(bot_id.."MODEDEV:Lock:Sticker"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Sticker"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12185,7 +12185,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockgif' and Mod(data) then
 local Textedit = '• تم قفل المتحركات '
-redis:set(bot_id.."MODEDEV:Lock:Animation"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Animation"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12195,7 +12195,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockvideo' and Mod(data) then
 local Textedit = '• تم قفل الفيديو '
-redis:set(bot_id.."MODEDEV:Lock:Video"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Video"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12205,7 +12205,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockphoto' and Mod(data) then
 local Textedit = '• تم قفل الصور '
-redis:set(bot_id.."MODEDEV:Lock:Photo"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Photo"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12215,7 +12215,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockvoise' and Mod(data) then
 local Textedit = '• تم قفل الاغاني '
-redis:set(bot_id.."MODEDEV:Lock:Audio"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Audio"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12225,7 +12225,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockaudo' and Mod(data) then
 local Textedit = '• تم قفل الصوت '
-redis:set(bot_id.."MODEDEV:Lock:vico"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:vico"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12235,7 +12235,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockfwd' and Mod(data) then
 local Textedit = '• تم قفل التوجيه '
-redis:set(bot_id.."MODEDEV:Lock:forward"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:forward"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12245,7 +12245,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockfile' and Mod(data) then
 local Textedit = '• تم قفل الملفات '
-redis:set(bot_id.."MODEDEV:Lock:Document"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Document"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12255,7 +12255,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockphone' and Mod(data) then
 local Textedit = '• تم قفل الجهات '
-redis:set(bot_id.."MODEDEV:Lock:Contact"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Contact"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12265,7 +12265,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockposts' and Mod(data) then
 local Textedit = '• تم قفل الكلايش '
-redis:set(bot_id.."MODEDEV:Lock:Spam"..Chat_id,'del')  
+redis:set(bot_id.."DRAGON:Lock:Spam"..Chat_id,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12275,7 +12275,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockflood' and Mod(data) then
 local Textedit = '• تم قفل التكرار '
-redis:hset(bot_id.."MODEDEV:Spam:Group:User"..Chat_id ,"Spam:User",'del')  
+redis:hset(bot_id.."DRAGON:Spam:Group:User"..Chat_id ,"Spam:User",'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12314,7 +12314,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/lockinlene' and Mod(data) then
 local Textedit = '• تم قفل الانلاين '
-redis:set(bot_id.."MODEDEV:Lock:Inlen"..Chat_id,"del")  
+redis:set(bot_id.."DRAGON:Lock:Inlen"..Chat_id,"del")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12325,7 +12325,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/unlockjoine' and Mod(data) then
 local Textedit = '• تم فتح الاضافه '
-redis:del(bot_id.."MODEDEV:Lock:AddMempar"..Chat_id)
+redis:del(bot_id.."DRAGON:Lock:AddMempar"..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12335,7 +12335,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockchat' and Mod(data) then
 local Textedit = '• تم فتح الدردشه '
-redis:del(bot_id.."MODEDEV:Lock:text"..Chat_id) 
+redis:del(bot_id.."DRAGON:Lock:text"..Chat_id) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12345,7 +12345,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlock_joine' and Mod(data) then
 local Textedit = '• تم فتح الدخول '
-redis:del(bot_id.."MODEDEV:Lock:Join"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Join"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12355,7 +12355,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockbots' and Mod(data) then
 local Textedit = '• تم فتح البوتات '
-redis:del(bot_id.."MODEDEV:Lock:Bot:kick"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Bot:kick"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12365,7 +12365,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlocktags' and Mod(data) then
 local Textedit = '• تم فتح الاشعارات '
-redis:del(bot_id.."MODEDEV:Lock:tagservr"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:tagservr"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12375,7 +12375,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockedit' and Mod(data) then
 local Textedit = '• تم فتح التعديل '
-redis:del(bot_id.."MODEDEV:Lock:edit"..Chat_id)
+redis:del(bot_id.."DRAGON:Lock:edit"..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12385,7 +12385,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlocklink' and Mod(data) then
 local Textedit = '• تم فتح الروابط '
-redis:del(bot_id.."MODEDEV:Lock:Link"..Chat_id)
+redis:del(bot_id.."DRAGON:Lock:Link"..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12395,7 +12395,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockusername' and Mod(data) then
 local Textedit = '• تم فتح المعرفات '
-redis:del(bot_id.."MODEDEV:Lock:User:Name"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:User:Name"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12405,7 +12405,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlocktag' and Mod(data) then
 local Textedit = '• تم فتح التاك '
-redis:del(bot_id.."MODEDEV:Lock:hashtak"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:hashtak"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12415,7 +12415,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlocksticar' and Mod(data) then
 local Textedit = '• تم فتح الملصقات '
-redis:del(bot_id.."MODEDEV:Lock:Sticker"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Sticker"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12425,7 +12425,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockgif' and Mod(data) then
 local Textedit = '• تم فتح المتحركات '
-redis:del(bot_id.."MODEDEV:Lock:Animation"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Animation"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12435,7 +12435,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockvideo' and Mod(data) then
 local Textedit = '• تم فتح الفيديو '
-redis:del(bot_id.."MODEDEV:Lock:Video"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Video"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12445,7 +12445,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockphoto' and Mod(data) then
 local Textedit = '• تم فتح الصور '
-redis:del(bot_id.."MODEDEV:Lock:Photo"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Photo"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12455,7 +12455,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockvoise' and Mod(data) then
 local Textedit = '• تم فتح الاغاني '
-redis:del(bot_id.."MODEDEV:Lock:Audio"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Audio"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12465,7 +12465,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockaudo' and Mod(data) then
 local Textedit = '• تم فتح الصوت '
-redis:del(bot_id.."MODEDEV:Lock:vico"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:vico"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12475,7 +12475,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockfwd' and Mod(data) then
 local Textedit = '• تم فتح التوجيه '
-redis:del(bot_id.."MODEDEV:Lock:forward"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:forward"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12485,7 +12485,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockfile' and Mod(data) then
 local Textedit = '• تم فتح الملفات '
-redis:del(bot_id.."MODEDEV:Lock:Document"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Document"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12495,7 +12495,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockphone' and Mod(data) then
 local Textedit = '• تم فتح الجهات '
-redis:del(bot_id.."MODEDEV:Lock:Contact"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Contact"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12505,7 +12505,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockposts' and Mod(data) then
 local Textedit = '• تم فتح الكلايش '
-redis:del(bot_id.."MODEDEV:Lock:Spam"..Chat_id) 
+redis:del(bot_id.."DRAGON:Lock:Spam"..Chat_id) 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12515,7 +12515,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockflood' and Mod(data) then
 local Textedit = '• تم فتح التكرار '
-redis:hdel(bot_id.."MODEDEV:Spam:Group:User"..Chat_id ,"Spam:User")  
+redis:hdel(bot_id.."DRAGON:Spam:Group:User"..Chat_id ,"Spam:User")  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12555,7 +12555,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 elseif Text == '/unlockinlene' and Manager(data) then
 local Textedit = '• تم فتح الانلاين '
-redis:del(bot_id.."MODEDEV:Lock:Inlen"..Chat_id)  
+redis:del(bot_id.."DRAGON:Lock:Inlen"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12658,8 +12658,8 @@ local mem_id = msg.content_.members_
 local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_) 
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "del" then   
-MODEDEV = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(MODEDEV)
+DRAGON = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(DRAGON)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -12692,7 +12692,7 @@ return false
 end    
 end
 --------------------------------------------------------------------------------------------------------------
-SourceMODEDEV(data.message_,data)
+SourceDRAGON(data.message_,data)
 plugin_Poyka(data.message_)
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -12799,13 +12799,13 @@ return false
 end  
 end 
 ------------------------------------------------------------------------
-local MODEDEVAbot = database:get(bot_id.."MODEDEV1:Add:Filter:Rp2"..text..result.chat_id_)   
-if MODEDEVAbot then    
+local DRAGONAbot = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..text..result.chat_id_)   
+if DRAGONAbot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0,"•العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n•["..MODEDEVAbot.."] \n") 
+send(msg.chat_id_,0,"•العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n•["..DRAGONAbot.."] \n") 
 else
-send(msg.chat_id_,0,"•العضو : {["..data.first_name_.."](T.ME/Revorb0t)}\n•["..MODEDEVAbot.."] \n") 
+send(msg.chat_id_,0,"•العضو : {["..data.first_name_.."](T.ME/Revorb0t)}\n•["..DRAGONAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
@@ -12826,9 +12826,9 @@ end
 end
 ------------------------------------------------------------------------
 if text then
-local MODEDEV1_Msg = database:get(bot_id.."MODEDEV1:Add:Filter:Rp2"..text..result.chat_id_)   
-if MODEDEV1_Msg then    
-send(msg.chat_id_, msg.id_,"•"..MODEDEV1_Msg)
+local DRAGON1_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..text..result.chat_id_)   
+if DRAGON1_Msg then    
+send(msg.chat_id_, msg.id_,"•"..DRAGON1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
