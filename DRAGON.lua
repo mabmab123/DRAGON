@@ -989,7 +989,7 @@ end
 send_inline_key(msg.chat_id_, msg.id_, keyboard) 
 end
 end
-if not database:setex(bot_id..'Start:Time'..msg.sender_user_id_,)then
+if not database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
 local start = database:get(bot_id.."Start:Bot")  
 end
 if text == 'احياء' then  
