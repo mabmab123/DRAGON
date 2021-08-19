@@ -967,7 +967,7 @@ end
 if not database:get(bot_id..'Start:Time'..msg.sender_user_id_) then
 local start = database:get(bot_id.."Start:Bot")  
 if start then 
-keyboard = start
+keyboard ='start' or 'العوده'
 else
 keyboard = {
 {'•ا↓↓خـتر الـسـنه الـدراسـيه مـن الازرار بي الاسفل↓↓•'},
@@ -1053,7 +1053,6 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 if not DevSoFi(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
-send(msg.sender_user_id_, msg.id_,'◉ تـم ارسـال رسالـتك للمـطور')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta) 
 vardump(data)
@@ -13194,7 +13193,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '◉ انا بوت وبحبك..??💘') 
+send(msg.chat_id_,msg.id_, '◉ انا بوت وبحبك..🥺💘') 
 return false
 end
 
