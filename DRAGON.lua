@@ -989,15 +989,15 @@ end
 send_inline_key(msg.chat_id_, msg.id_, keyboard) 
 end
 end
-if not database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
-return false
+if not database:setex(bot_id..'Start:Time'..msg.sender_user_id_,)then
+local start = database:get(bot_id.."Start:Bot")  
 end
 if text == 'احياء' then  
 local bl = 'مرحبا بك في اوامر الاذاعه..💘🙂'
 local keyboard = {
-{'الدرس التاني','الدرس الاول'},
-{'الدرس التالت'},
-{'الدرس الخامس','الدرس الرابع'},
+{'اذاعه بالتوجيه خاص','اذاعه بالتوجيه'},
+{'اذاعه بالتثبيت'},
+{'اذاعه خاص','اذاعه'},
 {'العوده'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
@@ -8790,7 +8790,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ◉ قائمة رقاصات الجروب \n•━═━═━═『༺ཌ ༈ 𝗔𝗭𝗔??𝗜𝗟 ༈ད༻』═━═━═━•\n"
+t = "\n ◉ قائمة رقاصات الجروب \n•━═━═━═『༺ཌ ༈ 𝗔𝗭𝗔𝗭𝗜𝗟 ༈ད༻』═━═━═━•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9398,7 +9398,7 @@ send(msg.chat_id_, msg.id_, ' ◉ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n ◉ قائمة المكتومين \n_____༺ཌ ༈ 𝗔𝗭𝗔𝗭??𝗟 ༈ད༻_____\n"
+t = "\n ◉ قائمة المكتومين \n_____༺ཌ ༈ 𝗔𝗭𝗔𝗭𝗜𝗟 ༈ད༻_____\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
