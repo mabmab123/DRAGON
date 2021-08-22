@@ -2722,10 +2722,6 @@ if text == 'انتهي' or text == 'قناه السورس' or text == 'قناه 
 local Text =[[
 [   لقد تم دعمك بنجاح انتظر القليل من الوقت 𓆩💛𓆪  ]
 ]]
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 
 if text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '"' then
 local Text =[[
@@ -12199,7 +12195,7 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ??𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
