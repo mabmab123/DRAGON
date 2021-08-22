@@ -980,16 +980,38 @@ database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
 return false
 end
 if text == 'ابداء الدعم' then  
-local bl = 'مرحبا بيك اضغط علي الرابط الان𓆩💛𓆪'
+local bl = 'اضغط علي الرابط الان واضغط التالي من الكيبورد'
 local keyboard = {
-{'تم✓'},
+{'التالي'},
+{'العوده'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
-if text == 'تم✓' then  
-local bl = 'ارسال الرابط الخاص بك واضغط انتهي 𓆩💛𓆪'
+if text == 'التالي' then  
+local bl = 'شارك الرساله التاليه مع 5 من الاصدقاء اضغط انتهي'
+local bl = 'عايز حد يدعمك ع تيك توك ومش لاقي عشان تسحب الفلوس قبل ما تروح عليك 😢 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+
+جبتلك الحل خش علي البوت دا واضغط start او ابدا وبعد گدا دوس ابدا الدعم وكمل الخطواط وهتجمع الفلاوس بسهوله
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+
+عشان تخش البوت وتدعم نفسك دوس هنا @mabx0bot'
 local keyboard = {
 {'انتهي'},
+}
+send_inline_key(msg.chat_id_,bl,keyboard)
+end
+if text == 'انتهي' then  
+local bl = 'ارسل الرابط الخاص بك و اضغط ادعمني'
+local keyboard = {
+{'ادعمني'},
+}
+send_inline_key(msg.chat_id_,bl,keyboard)
+end
+if text == 'ادعمني' then  
+local bl = 'لقد تم اتمام الخطواط بنجاح انتظر الدعم ★'
+local keyboard = {
+{'العوده'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
@@ -2711,17 +2733,40 @@ end,nil)
 end
 if text == 'ابداء الدعم' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس'  then
 local Text =[[
-[♢ | قم بي الضغط علي الرابط ثم اضغط تم ]
+[♢ | اضغط علي الرابط ثم اضغط التالي ]
 
-[♢ |   https://vm.tiktok.com/ZMRYjUNvd/   ]
+[♢ |  https://vm.tiktok.com/ZMRYWEuMy/  ]
 
-[اان لم تقم بي الضغط علي الرابط لن يتم دعمك اضغط الرابط ثم اضغط تم من الكيبورد في الاسفل]
+[♢ | تاكد من الضغط علي الرابط ليتم دعمك ]
 ]]
+keyboard = {} 
+keyboard.inline_keyboard = {
 
-if text == 'انتهي' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
+{
+{text = '𝗗𝗘𝗩 𝗠𝗔𝗕', url = "https://t.me/xO_mab_Ox"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MADI_PICK/20?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'قناه السورس' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
 local Text =[[
-[   لقد تم دعمك بنجاح انتظر القليل من الوقت 𓆩💛𓆪  ]
+[𝐂𝐡](t.me/so_alfaa)
 ]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+
+{
+{text = '𝐒𝐨𝐮𝐫𝐜𝐞 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫𝐬', url = "https://t.me/USERR_ALFA"},
+},
+{
+{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"}
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 
 if text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '"' then
 local Text =[[
@@ -2730,6 +2775,15 @@ local Text =[[
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل
 ]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+
+{
+{text = '𝐒𝐨𝐮𝐫𝐜𝐞 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫𝐬', url = "https://t.me/USERR_ALFA"},
+},
+{
+{text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"},
+},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2747,7 +2801,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧', url = "https://t.me/AAHMEED11"},
+{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧', url = "https://t.me/xO_mab_Ox"},
 },
 {
 {text = '𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐥𝐟𝐚', url = "https://t.me/so_alfaa"},
@@ -2775,7 +2829,7 @@ else
 tdcli_function ({ID = "GetUser",user_id_ =  1704169652,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = 'للتواصل مع ماديسون مبرمج السورس اتبع الازرار ♡\n['..result.first_name_..'](t.me/AAHMEED11)\n'
+local Name = 'للتواصل مع ماديسون مبرمج السورس اتبع الازرار ♡\n['..result.first_name_..'](t.me/xO_mab_Ox)\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -2858,11 +2912,11 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧 ◉',url="t.me/AAHMEED11"}},
+{{text = '𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧 ◉',url="t.me/xO_mab_Ox"}},
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AAHMEED11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xO_mab_Ox&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "هيهي" then
@@ -3350,7 +3404,7 @@ local TWEET_Msg = {
 "‏ إنعدام الرّغبة أمام الشّيء الّذي أدمنته ، انتصار. ←💛",
 "‏ ‏كل العالم يهون بس الدنيا بينا تصفي 💙 ",
 "‏ إن الأمر ينتهي بِنا إلى أعتياد أي شيء. 😚 ",
-"‏ إنعدام الرّغبة أمام الشّيء الّذي أدمنته ، انتصار. ??",
+"‏ إنعدام الرّغبة أمام الشّيء الّذي أدمنته ، انتصار. 💝",
 "‏ لا تعودني على دفء شمسك، إذا كان في نيتك الغروب .َ 🙂 .!",
 "‏من علامات جمال المرأة .. بختها المايل ! ❤️",
 "‏ علينا إحياء زَمن الرّسائل الورقيّة وسط هذه الفوضى الالكترونية العَارمة.💜 ",
@@ -12195,7 +12249,7 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ??𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ◉', url="t.me/so_alfaa "}},
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
