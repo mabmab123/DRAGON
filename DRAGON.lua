@@ -1069,7 +1069,7 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 if not DevSoFi(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
-send(msg.sender_user_id_, msg.id_,'◉ تـم ارسـال رسالـتك للمـطور')
+send(msg.sender_user_id_, msg.id_,'✓')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta) 
 vardump(data)
@@ -2740,7 +2740,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MADI_PICK/20?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_AZAZIL/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'التالي' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
@@ -2748,10 +2748,11 @@ local Text =[[
 عايز حد يدعمك ع تيك توك ومش لاقي عشان تسحب الفلوس قبل ما تروح عليك 😢 
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 
-جبتلك الحل خش علي البوت دا واضغط start او ابدا وبعد گدا دوس ابدا الدعم وكمل الخطواط وهتجمع الفلاوس بسهوله
+جبتلك الحل خش علي البوت دا واضغط start او ابدا وبعد گدا دوس ابدا الدعم وكمل الخطواط وهتجمع الفلوس بي سهوله
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 
 عشان تخش البوت وتدعم نفسك دوس هنا @mabx0bot
+https://t.me/mabx0bot
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2761,7 +2762,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/so_alfaa&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SouRce_AZAZIL/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '•━═━═━═『𝙰𝚕𝚏𝚊』═━═━═━•' or text == '"' then
