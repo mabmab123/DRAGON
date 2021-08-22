@@ -2717,10 +2717,6 @@ local Text =[[
 
 [اان لم تقم بي الضغط علي الرابط لن يتم دعمك اضغط الرابط ثم اضغط تم من الكيبورد في الاسفل]
 ]]
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AL_YOUT_BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 
 if text == 'انتهي' or text == 'قناه السورس' or text == 'قناه السورس' or text == '"' then
 local Text =[[
